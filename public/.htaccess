@@ -1,9 +1,9 @@
 ###START MOD_REWRITE
     RewriteEngine On
     RewriteBase /
-    
-    RewriteRule ^/(.+\.[jpg|jpeg|gif|png|bmp|webp])$ $1 [END]
-    RewriteRule ^/assets/(.+)$ assets/$1 [END]
-    RewriteRule ^$ index.html [END]
 
+    RewriteRule ^assets/(.+)$ assets/$1 [L]
+    RewriteRule ^(.+\.(jpg|jpeg|gif|png|bmp|webp))$ $1 [L]
+    RewriteRule ^.*$ index.html [L]
+    RewriteRule ^$ index.html [L]
 ###END MOD_REWRITE
